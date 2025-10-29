@@ -1,4 +1,21 @@
 require './calculator'
 
 describe Calculator do
+  describe '#add' do
+    before do
+      @calculator = Calculator.new
+    end
+
+    it 'should return 0 when empty string is passed' do
+      expect(@calculator.add('')).to eq(0)
+    end
+
+    it 'should add 2 numbers correctly' do
+      expect(@calculator.add('1,2')).to eq(3)
+    end
+
+    it 'should add 3 numbers correctly' do
+      expect(@calculator.add('1,2,3')).to eq(6)
+    end
+  end
 end
