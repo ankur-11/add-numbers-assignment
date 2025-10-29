@@ -29,5 +29,11 @@ describe Calculator do
         expect(@calculator.add("//;\n1;2")).to eq(3)
       end
     end
+
+    context 'when negative numbers are passed' do
+      it 'should raise an exception' do
+        expect { @calculator.add('-1,2') }.to raise_error("negative numbers not allowed -1")
+      end
+    end
   end
 end
