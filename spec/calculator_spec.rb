@@ -17,5 +17,11 @@ describe Calculator do
     it 'should add 3 numbers correctly' do
       expect(@calculator.add('1,2,3')).to eq(6)
     end
+
+    context 'when new line is passed as delimiter' do
+      it 'should add 2 numbers correctly' do
+        expect(@calculator.add("1\n2")).to eq(3)
+      end
+    end
   end
 end
