@@ -31,6 +31,7 @@ calc.add("1,2,3")      # 6
 calc.add("")           # 0
 calc.add("1\n2")       # 3
 calc.add("//;\n1;2")   # 3
+calc.add("//*\n1*2")   # 2
 ```
 
 ## TDD Approach
@@ -46,6 +47,7 @@ Added features in this order:
 4. Newline delimiters
 5. Custom delimiters
 6. Negative number validation
+7. Multiply numbers with delimeter '*'
 
 The tests in `spec/calculator_spec.rb` show what the calculator should do. Run them to make sure everything works.
 
