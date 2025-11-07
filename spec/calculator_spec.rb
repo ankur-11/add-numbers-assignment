@@ -30,6 +30,12 @@ describe Calculator do
       end
     end
 
+    context 'when custom delimiter is * passed' do
+      it 'should multiply numbers correctly' do
+        expect(@calculator.add("//*\n1*2")).to eq(2)
+      end
+    end
+
     context 'when negative numbers are passed' do
       it 'should raise an exception' do
         expect { @calculator.add('-1,2') }.to raise_error("negative numbers not allowed -1")
